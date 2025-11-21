@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プラスワン | 室蘭 子育て応援イベント - 2025年11月30日</title>
+    <meta name="description" content="室蘭の子育てを応援する地域密着型イベント「プラスワン」。ハンドメイド、フード、ワークショップが集まる楽しい一日！">
+    <meta name="keywords" content="室蘭,子育て,イベント,ハンドメイド,ワークショップ,栗林アリーナ,プラスワン">
+    
+    <meta property="og:title" content="プラスワン | 室蘭 子育て応援イベント">
+    <meta property="og:description" content="頑張っているママやパパにご褒美を！2025年11月30日、栗林アリーナで開催！">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://plusone-muroran.jp">
+    <meta property="og:image" content="image_2df73d.jpg">
+    <meta property="og:site_name" content="プラスワン (plus 1)">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <style>
+        :root {
+            --color-main: #a35b44;
+            --color-accent: #e38965;
+            --color-bg-light: #fffbe6;
+            --color-bg-section: #fff9e8;
+            --color-text: #333;
+            --color-white: white;
+            --nav-height: 48px;
+            --time-bar-height: 30px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+            color: var(--color-text);
+            line-height: 1.6;
+            background-color: var(--color-bg-light);
+            scroll-behavior: smooth;
+            padding-top: var(--time-bar-height);
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--color-main);
+            transition: opacity .3s;
+        }
+        
+        a:hover {
+            opacity: .7;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        
+        .section {
+            padding: 50px 0;
+        }
+        
+        .section-gray {
+            background-color: var(--color-bg-section);
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            color: var(--color-main);
+            border-bottom: 2px solid var(--color-main);
+            display: block;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 5px;
+        }
+        
+        h3 {
+            color: var(--color-accent);
+            margin-bottom: 10px;
+        }
+        
+        #current-time-bar {
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            text-align: center;
+            padding: 5px 0;
+            font-size: .85em;
+            font-weight: bold;
+            z-index: 1001;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--time-bar-height);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #nav {
+            background-color: var(--color-main);
+            padding: 10px 0;
+            position: sticky;
+            top: var(--time-bar-height);
+            z-index: 1000;
+        }
+        
+        #nav a {
+            color: var(--color-white);
+            font-size: .9em;
+            margin-left: 15px;
+            padding: 5px 0;
+        }
+        
+        #nav>.container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        #nav>.container>a:first-child {
+            font-weight: bold;
+        }
+        
+        #main-visual {
+            /* NOTE: 背景画像は 'image_2df73d.jpg' が必要です */
+            background-image: linear-gradient(rgba(255, 251, 230, .7), rgba(255, 251, 230, .7)), url('image_2df73d.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--color-text);
+            text-align: center;
+            padding: 100px 0 50px; /* カレンダーボタンのスペース確保 */
+            min-height: 400px;
+        }
+        
+        #main-visual h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            color: var(--color-main);
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, .8);
+        }
+        
+        .catchphrase,
+        .date-location {
+            font-weight: bold;
+        }
+        
+        .btn-main {
+            display: inline-block;
+            background-color: var(--color-accent);
+            color: var(--color-white) !important;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color .3s;
+            margin-bottom: 20px;
+        }
+        
+        .btn-main:hover {
+            background-color: var(--color-main);
+        }
+        
+        #btn-calendar-add {
+            background-color: #3C82F6; /* Google Calendar Blue */
+            margin-left: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+        }
+
+        #btn-calendar-add:hover {
+            background-color: #1e62c6;
+        }
+        
+        #timer-container {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: var(--color-main);
+            color: var(--color-white);
+            border-radius: 8px;
+            display: inline-block;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        .feature-grid {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        
+        .feature-item {
+            width: 30%;
+            min-width: 250px;
+            background-color: var(--color-white);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, .05);
+            margin-bottom: 20px;
+        }
+        
+        #recruitment {
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        #recruitment h2 {
+            color: var(--color-white);
+            border-bottom-color: var(--color-white);
+        }
+        
+        .btn-recruit {
+            background-color: var(--color-main) !important;
+        }
+        
+        .btn-recruit:hover {
+            background-color: #833b24 !important;
+        }
+        
+        #booths .filter-buttons button {
+            background-color: var(--color-bg-section);
+            border: 1px solid var(--color-main);
+            color: var(--color-main);
+            padding: 8px 15px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: background-color .3s, color .3s;
+        }
+        
+        #booths .filter-buttons button.active,
+        #booths .filter-buttons button:hover {
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            border-color: var(--color-accent);
+        }
+        
+        .booth-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .booth-item-link {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
+        }
+        
+        .booth-item {
+            background-color: var(--color-white);
+            padding: 20px;
+            border-left: 5px solid var(--color-main);
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+            transition: transform .3s, box-shadow .3s;
+            height: 100%;
+        }
+        
+        .booth-item-link:hover .booth-item {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, .15);
+            background-color: #fffaf0;
+        }
+        
+        .booth-item h3 {
+            color: var(--color-main);
+            margin-bottom: 5px;
+        }
+        
+        .booth-item .booth-type {
+            display: inline-block;
+            background-color: var(--color-bg-light);
+            color: var(--color-main);
+            font-size: .8em;
+            padding: 3px 8px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        
+        /* --- スライドショーのスタイル追加 --- */
+        #gallery-slideshow-container {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+        }
+        
+        .mySlides {
+            display: none;
+            position: relative;
+        }
+
+        .mySlides img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .slide-caption {
+            color: var(--color-white);
+            font-weight: bold;
+            font-size: 1.2em;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        /* --- 既存のギャラリーコードは削除し、スライドショーに置き換えました --- */
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, .9);
+        }
+        
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+        
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: .3s;
+            cursor: pointer;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .timetable-item {
+            display: flex;
+            border-bottom: 1px dashed var(--color-accent);
+            padding: 15px 0;
+        }
+        
+        .timetable-item:last-child {
+            border-bottom: none;
+        }
+        
+        .timetable-item .time {
+            font-weight: bold;
+            color: var(--color-main);
+            width: 80px;
+            flex-shrink: 0;
+            text-align: right;
+            padding-right: 20px;
+        }
+        
+        .timetable-item .activity {
+            flex-grow: 1;
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: white;
+        }
+        
+        .faq-question {
+            background-color: var(--color-bg-section);
+            padding: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--color-main);
+            position: relative;
+            outline: none;
+        }
+        
+        .faq-question:focus {
+            box-shadow: 0 0 0 2px var(--color-accent);
+        }
+        
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform .3s;
+        }
+        
+        .faq-question.active::after {
+            content: '-';
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .3s ease-in-out;
+            padding: 0 15px;
+        }
+        
+        .faq-answer.open {
+            padding-bottom: 15px;
+        }
+        
+        .faq-answer p {
+            padding-top: 15px;
+        }
+        
+        #summary table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            background-color: white;
+        }
+        
+        #summary th,
+        #summary td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        #summary th {
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            width: 30%;
+        }
+        
+        /* --- アクセスタブのスタイル追加 --- */
+        .access-tabs {
+            display: flex;
+            margin-bottom: -1px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .access-tabs button {
+            background-color: var(--color-bg-section);
+            border: 1px solid #ccc;
+            border-bottom: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--color-text);
+            transition: background-color 0.3s;
+        }
+
+        .access-tabs button.active {
+            background-color: var(--color-white);
+            border-top: 2px solid var(--color-main);
+            border-left-color: #ccc;
+            border-right-color: #ccc;
+            margin-bottom: -1px;
+        }
+
+        .tab-content {
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: var(--color-white);
+        }
+
+        .map-placeholder iframe {
+            width: 100%;
+            height: 400px;
+            display: block;
+        }
+
+        .access-info ul {
+            list-style: disc;
+            margin-left: 20px;
+        }
+        
+        footer {
+            background-color: var(--color-main);
+            color: var(--color-white);
+            padding: 20px 0;
+            text-align: center;
+            font-size: .9em;
+        }
+        
+        footer a {
+            color: var(--color-white);
+            text-decoration: underline;
+        }
+        
+        #pagetop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--color-accent);
+            color: var(--color-white) !important;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: .9em;
+            z-index: 999;
+            transition: opacity .3s;
+        }
+        
+        #pagetop:hover {
+            opacity: .7;
+        }
+        
+        @media print {
+            #nav,
+            #recruitment,
+            #pagetop,
+            .filter-buttons,
+            .btn-main,
+            #timer-container,
+            #current-time-bar,
+            .modal,
+            .close,
+            #btn-calendar-add,
+            .access-tabs,
+            .prev, .next {
+                display: none !important;
+            }
+            
+            body,
+            .section-gray,
+            .booth-item-link .booth-item {
+                background-color: white !important;
+            }
+            
+            .section {
+                padding: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="current-time-bar" role="status" aria-live="polite">現在の日本時間: <span id="display-current-time"></span></div>
+
+    <nav id="nav" role="navigation" aria-label="メインナビゲーション">
+        <div class="container">
+            <a href="#main-visual">プラスワン (plus 1)</a>
+            <div>
+                <a href="#booths">ブース</a>
+                <a href="#timetable">時間割</a>
+                <a href="#recruitment">募集</a>
+                <a href="#summary">概要</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="main-visual" role="banner">
+        <div class="container">
+            <h1>プラスワン <br> (plus 1)</h1>
+            <p class="catchphrase">頑張っている人にご褒美を！</p>
+            <p class="date-location">🗓️ 2025.11.30 (日) 10:30-15:00<br>📍 栗林アリーナ（室蘭）</p>
+            
+            <a href="#" id="btn-calendar-add" class="btn-main" aria-label="Googleカレンダーにイベントを追加">
+                🗓️ カレンダーに追加
+            </a>
+
+            <a href="#recruitment" class="btn-main" aria-label="出店者募集の詳細ページへ">出店者募集はこちら！</a>
+
+            <div id="timer-container">開催まで残り... <span id="countdown-timer"></span></div>
+        </div>
+    </header>
+
+    <main role="main">
+        <section id="concept" class="section">
+            <div class="container">
+                <h2>イベントコンセプト</h2>
+                <p>「子育ては孤独じゃない、頑張りすぎなくても大丈夫」</p>
+                <p>日々の忙しさを忘れ、ママやパパ、そして子どもたちが心から楽しめる一日を提供します。美味しいもの、楽しい体験、癒やしのブースが盛りだくさん！</p>
+            </div>
+        </section>
+
+        <section id="features" class="section section-gray">
+            <div class="container">
+                <h2>プラスワンの魅力</h2>
+                <div class="feature-grid">
+                    <div class="feature-item" role="article">
+                        <h3>🛍️ ハンドメイドマーケット</h3>
+                        <p>地元作家さんの素敵な雑貨やアクセサリーが集結！自分へのご褒美を見つけよう。</p>
+                    </div>
+                    <div class="feature-item" role="article">
+                        <h3>🎤 ステージパフォーマンス</h3>
+                        <p>家族で楽しめる音楽やダンス、ヒーローショーも開催予定！タイムテーブルは後日公開。</p>
+                    </div>
+                    <div class="feature-item" role="article">
+                        <h3>🎨 体験・ワークショップ</h3>
+                        <p>親子で参加できる楽しい体験コーナーで思い出作り。事前予約が必要なブースもあります。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="booths" class="section">
+            <div class="container">
+                <h2>出店ブース一覧</h2>
+                <div class="filter-buttons" role="group" aria-label="出店ブースのフィルタリング">
+                    <button data-filter="all" class="active" aria-pressed="true">全て表示</button>
+                    <button data-filter="handmade" aria-pressed="false">ハンドメイド</button>
+                    <button data-filter="food" aria-pressed="false">フード</button>
+                    <button data-filter="workshop" aria-pressed="false">ワークショップ</button>
+                    <button data-filter="healing" aria-pressed="false">癒やし/美容</button>
+                </div>
+                <div class="booth-grid" id="booth-list" role="list"></div>
+                <p style="text-align:center;margin-top:30px;font-size:.9em;">※ブース名をクリックすると、出店者の外部サイトへ移動します。</p>
+            </div>
+        </section>
+
+        <section id="timetable" class="section section-gray">
+            <div class="container">
+                <h2>当日のタイムテーブル</h2>
+                <p style="text-align:center;margin-bottom:30px;color:var(--color-main);">最新のスケジュールは変更になる場合がございます。</p>
+                <div role="list">
+                    <div class="timetable-item" role="listitem">
+                        <div class="time">10:30</div>
+                        <div class="activity">開場 / マーケット・ワークショップ開始</div>
+                    </div>
+                    <div class="timetable-item" role="listitem">
+                        <div class="time">11:00</div>
+                        <div class="activity">オープニングセレモニー / 主催者挨拶</div>
+                    </div>
+                    <div class="timetable-item" role="listitem">
+                        <div class="time">12:30</div>
+                        <div class="activity">キッズダンスパフォーマンス (アリーナ内ステージ)</div>
+                    </div>
+                    <div class="timetable-item" role="listitem">
+                        <div class="time">14:00</div>
+                        <div class="activity">ファミリー向けヒーローショー</div>
+                    </div>
+                    <div class="timetable-item" role="listitem">
+                        <div class="time">14:45</div>
+                        <div class="activity">フィナーレ / 抽選会</div>
+                    </div>
+                    <div class="timetable-item" role="listitem">
+                        <div class="time">15:00</div>
+                        <div class="activity">閉場</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="recruitment">
+            <div class="container">
+                <h2>出店者・協賛企業 募集！</h2>
+                <p>あなたの「好き」や「得意」を活かしませんか？室蘭を一緒に盛り上げる仲間を募集中です！</p>
+                <a href="#" class="btn-main btn-recruit" aria-label="出店者募集の詳細はこちら">詳細・応募はこちら</a>
+            </div>
+        </section>
+
+        <section id="gallery" class="section">
+            <div class="container">
+                <h2>イベントの雰囲気 (ギャラリー)</h2>
+                <div id="gallery-slideshow-container" aria-live="polite">
+                    <div class="mySlides fade" role="img" aria-label="フードブースのイメージ">
+                        <img src="https://stat.ameba.jp/user_images/20251023/13/muroran-event/7a/f4/j/o1080135015701821591.jpg" alt="フードブースのイメージ">
+                        <div class="slide-caption"> 多目的アリーナの様子</div>
+                    </div>
+                    <div class="mySlides fade" role="img" aria-label="ステージのイメージ">
+                        <img src="https://stat.ameba.jp/user_images/20251023/13/muroran-event/17/ff/j/o1080135015701821589.jpg" alt="ステージのイメージ">
+                        <div class="slide-caption">交流サロンの様子</div>
+                    </div>
+                    <div class="mySlides fade" role="img" aria-label="ワークショップのイメージ">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzUf8MNKR60_ouHpOlyd2lh6yX8aZHFz2_pg&s" alt="ワークショップのイメージ">
+                        <div class="slide-caption">ワークショップ体験の様子</div>
+                    </div>
+                
+                    <a class="prev" tabindex="0" role="button" aria-label="前の画像へ">❮</a>
+                    <a class="next" tabindex="0" role="button" aria-label="次の画像へ">❯</a>
+                </div>
+                <p style="text-align:center;margin-top:20px;font-size:.9em;">写真は過去の開催イメージです。スライドでご覧ください。</p>
+            </div>
+        </section>
+
+        <div id="myModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="caption">
+            <span class="close" aria-label="画像を閉じる" tabindex="0" role="button">×</span>
+            <img class="modal-content" id="modalImage" alt="拡大画像">
+            <div id="caption"></div>
+        </div>
+
+        <section id="faq" class="section">
+            <div class="container">
+                <h2>よくあるご質問 (FAQ)</h2>
+                <div class="faq-item">
+                    <div class="faq-question" role="button" aria-expanded="false" aria-controls="faq-answer-1" tabindex="0">Q. 駐車場はありますか？</div>
+                    <div class="faq-answer" id="faq-answer-1" role="region">
+                        <p>A. 栗林アリーナの専用駐車場がありますが、数に限りがあるため公共交通機関の利用を推奨します。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" role="button" aria-expanded="false" aria-controls="faq-answer-2" tabindex="0">Q. ペットは連れて行けますか？</div>
+                    <div class="faq-answer" id="faq-answer-2" role="region">
+                        <p>A. 安全上、会場内へのペットの同伴はご遠慮ください。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="summary" class="section section-gray">
+            <div class="container">
+                <h2>イベント概要・アクセス</h2>
+                <table>
+                    <tr>
+                        <th>名称</th>
+                        <td>プラスワン (plus 1)</td>
+                    </tr>
+                    <tr>
+                        <th>日程</th>
+                        <td>2025年11月30日 (日) 10:30〜15:00</td>
+                    </tr>
+                    <tr>
+                        <th>会場</th>
+                        <td>栗林アリーナ（室蘭）</td>
+                    </tr>
+                    <tr>
+                        <th>入場料</th>
+                        <td>無料</td>
+                    </tr>
+                    <tr>
+                        <th>内容</th>
+                        <td>ハンドメイドマーケット、ステージパフォーマンス、ワークショップ、フード販売、癒やし・美容ブース</td>
+                    </tr>
+                    <tr>
+                        <th>主催</th>
+                        <td>プラスワン実行委員会</td>
+                    </tr>
+                    <tr>
+                        <th>問い合わせ</th>
+                        <td><a href="mailto:info@example.com">info@example.com</a></td>
+                    </tr>
+                </table>
+
+                <div class="access-tabs" role="tablist">
+                    <button role="tab" aria-controls="tab-map" id="tab-btn-map" class="active" data-content="map">地図</button>
+                    <button role="tab" aria-controls="tab-access" id="tab-btn-access" data-content="access">アクセス方法</button>
+                </div>
+                <div class="tab-content" id="tab-map" role="tabpanel" aria-labelledby="tab-btn-map">
+                    <div class="map-placeholder">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.082525658512!2d140.97406877604408!3d42.319438537667104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f9fdbc4bc9d0c3f%3A0x4c206676da257051!2z44qG5qCX5p6X5ZWG5Lya44Ki44Oq44O844OK!5e0!3m2!1sja!2sjp!4v1763695370042!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="tab-content access-info" id="tab-access" role="tabpanel" aria-labelledby="tab-btn-access" style="display:none;">
+                    <h3>🚌 公共交通機関</h3>
+                    <ul>
+                        <li>JR室蘭本線 **室蘭駅** より徒歩約3分。</li>
+                        <li>道南バス **栗林アリーナ前** 停留所より徒歩すぐ。</li>
+                    </ul>
+                    <h3>🚗 お車でお越しの方</h3>
+                    <ul>
+                        <li>道央自動車道 **室蘭IC** より車で約20分。</li>
+                        <li>専用駐車場（無料）をご利用いただけますが、満車の場合は近隣の有料駐車場をご利用ください。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 プラスワン (plus 1) | <a href="mailto:info@example.com">お問い合わせ</a></p>
+        <a href="#pagetop" id="pagetop">TOPへ戻る</a>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // イベント日時 (JST)
+            const EVENT_TITLE = 'プラスワン | 室蘭 子育て応援イベント';
+            const EVENT_LOCATION = '栗林アリーナ（室蘭）';
+            const EVENT_DATE_START = new Date('2025-11-30T10:30:00+09:00');
+            const EVENT_DATE_END = new Date('2025-11-30T15:00:00+09:00');
+
+
+            // --- 1. 現在時刻表示 ---
+            const displayCurrentTime = document.getElementById('display-current-time');
+            const updateCurrentTime = () => {
+                const now = new Date();
+                const options = {
+                    year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit',
+                    hour12: false,
+                    timeZone: 'Asia/Tokyo'
+                };
+                displayCurrentTime.textContent = new Intl.DateTimeFormat('ja-JP', options).format(now);
+            };
+            updateCurrentTime();
+            setInterval(updateCurrentTime, 1000);
+
+            // --- 2. FAQアコーディオン (変更なし) ---
+            document.querySelectorAll('.faq-question').forEach(button => {
+                const answer = button.nextElementSibling;
+                const toggleFaq = () => {
+                    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+                    // まず全てのアコーディオンを閉じる（オプション）
+                    // document.querySelectorAll('.faq-question.active').forEach(b => {
+                    //     if (b !== button) {
+                    //         b.classList.remove('active');
+                    //         b.setAttribute('aria-expanded', 'false');
+                    //         b.nextElementSibling.classList.remove('open');
+                    //         b.nextElementSibling.style.maxHeight = '0';
+                    //     }
+                    // });
+                    
+                    button.classList.toggle('active', !isExpanded);
+                    answer.classList.toggle('open', !isExpanded);
+                    button.setAttribute('aria-expanded', !isExpanded);
+                    // answer.scrollHeight + 30px (padding分)
+                    answer.style.maxHeight = !isExpanded ? answer.scrollHeight + 30 + "px" : "0";
+                };
+                button.addEventListener('click', toggleFaq);
+                button.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        toggleFaq();
+                    }
+                });
+            });
+
+            // --- 3. 出店ブース (変更なし) ---
+            const boothsData = [
+                {
+                    name: 'ハンドメイドアクセサリーmomo',
+                    type: 'handmade',
+                    description: 'かわいいアクセサリーがいっぱい！',
+                    url: '#'
+                },
+                {
+                    name: 'フードコート星のパン',
+                    type: 'food',
+                    description: '焼きたてパンと軽食',
+                    url: '#'
+                },
+                {
+                    name: '親子ワークショップ体験',
+                    type: 'workshop',
+                    description: '手作り体験で親子の思い出作り',
+                    url: '#'
+                },
+                {
+                    name: '癒しサロンsmile',
+                    type: 'healing',
+                    description: 'マッサージでリフレッシュ',
+                    url: '#'
+                }
+            ];
+            const boothList = document.getElementById('booth-list');
+            const renderBooths = (filter) => {
+                boothList.innerHTML = '';
+                boothsData.filter(b => filter === 'all' || b.type === filter).forEach(b => {
+                    const item = document.createElement('a');
+                    item.href = b.url;
+                    item.target = "_blank";
+                    item.className = 'booth-item-link';
+                    item.innerHTML = `<div class="booth-item"><h3>${b.name}</h3><p>${b.description}</p><span class="booth-type">${b.type}</span></div>`;
+                    boothList.appendChild(item);
+                });
+            };
+            renderBooths('all'); // 初回表示
+            
+            // フィルタボタンの処理
+            document.querySelectorAll('#booths .filter-buttons button').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('#booths .filter-buttons button').forEach(b => {
+                        b.classList.remove('active');
+                        b.setAttribute('aria-pressed', 'false');
+                    });
+                    btn.classList.add('active');
+                    btn.setAttribute('aria-pressed', 'true');
+                    renderBooths(btn.dataset.filter);
+                });
+            });
+
+            // --- 4. ギャラリーモーダル (スライドショーに置き換え) ---
+            // 既存のモーダルコードはスライドショーに置き換えられたため削除
+
+            // --- 5. カウントダウンタイマー (変更なし) ---
+            const countdownElem = document.getElementById('countdown-timer');
+            const updateCountdown = () => {
+                const now = new Date();
+                const diff = EVENT_DATE_START - now;
+
+                if (diff <= 0) {
+                    // イベント終了時刻も考慮
+                    if (now < EVENT_DATE_END) {
+                        countdownElem.textContent = "イベント開催中！";
+                        return;
+                    }
+                    countdownElem.textContent = "イベントは終了しました。";
+                    return;
+                }
+
+                const days = Math.floor(diff / 1000 / 60 / 60 / 24);
+                const hours = Math.floor(diff / 1000 / 60 / 60) % 24;
+                const minutes = Math.floor(diff / 1000 / 60) % 60;
+                const seconds = Math.floor(diff / 1000) % 60;
+
+                countdownElem.textContent = `${days}日 ${hours}時間 ${minutes}分 ${seconds}秒`;
+            };
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+
+            // --- 6. TOPへ戻るボタン (変更なし) ---
+            const pageTop = document.getElementById('pagetop');
+            window.addEventListener('scroll', () => {
+                pageTop.style.display = window.scrollY > 200 ? 'block' : 'none';
+            });
+
+            // ===================================
+            // ADDED FUNCTIONALITIES
+            // ===================================
+
+            // --- A. Googleカレンダー連携ボタンのロジック ---
+            const btnCalendarAdd = document.getElementById('btn-calendar-add');
+            const formatForCalendar = (date) => {
+                // YYYYMMDDTHHMMSSZ形式
+                return date.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+            };
+
+            const generateCalendarUrl = () => {
+                const dateStart = formatForCalendar(EVENT_DATE_START);
+                const dateEnd = formatForCalendar(EVENT_DATE_END);
+                const baseUrl = 'https://www.google.com/calendar/render?action=TEMPLATE';
+                const params = new URLSearchParams({
+                    text: EVENT_TITLE,
+                    dates: `${dateStart}/${dateEnd}`,
+                    details: '室蘭の子育てを応援する地域密着型イベント。ハンドメイド、フード、ワークショップなどが集まる楽しい一日です！詳細はウェブサイトをご覧ください。',
+                    location: EVENT_LOCATION,
+                    sf: 'true', // Show form
+                    output: 'xml'
+                });
+                return `${baseUrl}&${params.toString()}`;
+            };
+
+            btnCalendarAdd.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.open(generateCalendarUrl(), '_blank');
+            });
+
+
+            // --- B. ギャラリーのスライドショーロジック ---
+            let slideIndex = 1;
+            const slides = document.getElementsByClassName("mySlides");
+            const plusSlides = (n) => {
+                showSlides(slideIndex += n);
+            };
+
+            const showSlides = (n) => {
+                let i;
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                if (slides.length > 0) {
+                     slides[slideIndex - 1].style.display = "block";
+                }
+            };
+            
+            // 初回表示
+            if (slides.length > 0) {
+                 showSlides(slideIndex);
+            }
+            
+            // クリックイベント
+            document.querySelector('.prev').addEventListener('click', () => plusSlides(-1));
+            document.querySelector('.next').addEventListener('click', () => plusSlides(1));
+            document.querySelector('.prev').addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') { plusSlides(-1); }
+            });
+            document.querySelector('.next').addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') { plusSlides(1); }
+            });
+            
+            // 自動スライド
+            let slideInterval = setInterval(() => plusSlides(1), 5000); 
+            // ユーザー操作でタイマーリセット
+            document.getElementById('gallery-slideshow-container').addEventListener('mouseover', () => clearInterval(slideInterval));
+            document.getElementById('gallery-slideshow-container').addEventListener('mouseleave', () => {
+                clearInterval(slideInterval);
+                slideInterval = setInterval(() => plusSlides(1), 5000);
+            });
+
+
+            // --- C. アクセス情報タブ切り替えのロジック ---
+            document.querySelectorAll('.access-tabs button').forEach(button => {
+                button.addEventListener('click', () => {
+                    // 全てのタブとコンテンツをリセット
+                    document.querySelectorAll('.access-tabs button').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    document.querySelectorAll('.tab-content').forEach(content => {
+                        content.style.display = 'none';
+                    });
+
+                    // クリックされたタブをアクティブにし、対応するコンテンツを表示
+                    button.classList.add('active');
+                    const targetContentId = button.dataset.content === 'map' ? 'tab-map' : 'tab-access';
+                    document.getElementById(targetContentId).style.display = 'block';
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
